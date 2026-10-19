@@ -1,0 +1,13 @@
+请点评以下「{{direction}}」方向的模拟面试回答。
+
+问答对（qa_pairs）：
+{{qa_pairs}}
+
+请以JSON格式返回：
+{"score": {"expression": 0-10, "professional": 0-10, "logic": 0-10, "fit": 0-10}, "feedback": "逐题反馈", "advice": "综合改进建议"}
+
+要求：
+1. score 四维各0-10分：表达清晰度/专业性/逻辑性/岗位匹配度
+2. feedback 针对每道题给出具体点评（优点+不足）
+3. advice 给出可执行的提升建议
+4. 只返回JSON，不要其他内容

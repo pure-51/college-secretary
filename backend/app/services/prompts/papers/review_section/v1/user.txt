@@ -1,0 +1,19 @@
+请为综述撰写以下章节。
+
+章节（section）：
+{{section}}
+
+可用论文摘要（papers_summaries，含论文id与摘要）：
+{{papers_summaries}}
+
+引用要求（citations）：
+{{citations}}
+
+请以JSON格式返回：
+{"content": "章节正文（多段落）", "citations": [{"document_id": 论文id, "quote": "引用点说明"}]}
+
+要求：
+1. 章节正文每处论点需有论文支撑，不得编造
+2. 无法支撑的句子末尾标【待补充】
+3. citations 列出实际引用的论文与引用点
+4. 只返回JSON

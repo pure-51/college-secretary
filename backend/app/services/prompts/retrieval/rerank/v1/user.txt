@@ -1,0 +1,15 @@
+请对以下候选文档按与查询的相关度重新排序。
+
+查询（query）：
+{{query}}
+
+候选文档（candidates，数组，每项含 id、title、content）：
+{{candidates}}
+
+请以JSON格式返回：
+{"ranked": [{"id": 候选id, "score": 0.0-1.0, "reason": "排序理由"}]}
+
+要求：
+1. 按相关度从高到低排序
+2. 每项给出分数与理由
+3. 只返回JSON

@@ -1,0 +1,15 @@
+请从以下材料文本中提取生涯档案信息。
+
+材料文本：
+{{ocr_text}}
+
+类别提示（可选，供参考）：{{category_hint}}
+
+请以JSON格式返回：
+{"record_type": "honor|score|internship|activity|skill|paper_meta|ledger|signup_row|certificate", "title": "简明标题", "fields": {"具体字段名": "值", "award": "奖项名", "level": "国家级/省级/校级", "date": "2025-06", "organizer": "组织方"}, "evidence_confidence": 0.0-1.0}
+
+要求：
+1. record_type 只能从枚举中选择，无法确定时选 activity
+2. fields 尽量结构化，提取奖项/级别/时间/组织方等关键信息
+3. evidence_confidence 表示从文本中提取的置信度（0-1）
+4. 只返回JSON，不要其他内容

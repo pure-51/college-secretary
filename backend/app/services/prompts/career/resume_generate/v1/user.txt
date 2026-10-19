@@ -1,0 +1,17 @@
+请为以下用户生成一份针对「{{direction}}」方向的简历内容。
+
+用户档案分节（profile_sections）：
+{{profile_sections}}
+
+简历模板（template，若为空则用默认五段）：
+{{template}}
+
+请以JSON格式返回：
+{"sections": [{"title": "段落标题", "lines": [{"text": "经历描述", "source_key": "对应档案条目的key，无来源填null"}]}], "gaps": [{"field": "缺失字段", "suggestion": "补全建议"}]}
+
+要求：
+1. 简历五段结构：个人信息/教育背景/科研经历/荣誉奖项/技能与课外活动
+2. 每条经历必须基于用户档案（profile_sections），不得编造
+3. 无档案来源支撑的内容，text 填null并标 missing，source_key 填null（前端会显示【待补充】）
+4. gaps 列出档案中缺失但该方向重要的事项
+5. 只返回JSON，不要其他内容

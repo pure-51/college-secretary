@@ -1,0 +1,25 @@
+请判断以下用户请求的意图并路由到对应技能。
+
+用户请求（query）：
+{{query}}
+
+上下文（context，可为空）：
+{{context}}
+
+可路由的域：
+- career 生涯档案官（简历/面试/档案/保研/求职）
+- papers 科研论文库（论文/文献/综述/讲解/对比）
+- affairs 班务助理（通知/接龙/台账/班费/班级事务）
+- schedule 日程（待办/考试/日程/提醒）
+- inbox 收件箱（消息/通知/四六级/教务）
+- assistant 通用助手（闲聊/询问/其他）
+
+请以JSON格式返回：
+{"domain": "career|papers|affairs|schedule|inbox|assistant", "task": "对应技能名，无则空", "params": {}, "reply": "当域不明确时向用户澄清的话，明确则空", "needs_clarification": false, "evidence": []}
+
+要求：
+1. domain 必须取上述六域之一
+2. 明确意图时 task 填对应技能名（如 career.resume_generate），params 填该技能需要的参数
+3. 意图不明确（可归多域/信息不足）时 needs_clarification=true 并在 reply 说明
+4. evidence 为可引用的档案/文档证据列表，无则空数组
+5. 只返回JSON

@@ -1,0 +1,12 @@
+请从以下论文正文前部文本中抽取题录元数据。
+
+论文正文前3000字符：
+{{full_text_first_3000}}
+
+请以JSON格式返回：
+{"title": "论文标题", "authors": "作者列表（逗号分隔）", "journal": "期刊/会议名称", "year": 出版年份, "doi": "DOI号，没有填null", "abstract": "摘要", "language": "语言代码（en/zh）"}
+
+要求：
+1. 无法确定的字段填null或默认值
+2. title/abstract 保留原文语言，不得翻译
+3. 只返回JSON

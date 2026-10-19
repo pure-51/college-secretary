@@ -1,0 +1,19 @@
+请基于论文内容回答用户问题。
+
+用户问题：
+{{question}}
+
+论文内容片段（context）：
+{{context}}
+
+对话历史（history，可为空）：
+{{history}}
+
+请以JSON格式返回：
+{"answer": "回答内容", "citations": [{"chunk_id": 来源切片id, "confidence": 0.0-1.0}]}
+
+要求：
+1. 优先基于论文内容回答，引用来源切片
+2. 论文中没有的内容，明确说明"论文中未涉及"，不编造
+3. 无来源支撑的回答，citations 返回空数组
+4. 只返回JSON

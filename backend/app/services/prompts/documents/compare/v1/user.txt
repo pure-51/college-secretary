@@ -1,0 +1,11 @@
+请对比以下两个版本的政策文件内容，找出差异。
+
+旧版本：
+{{old_text}}
+
+新版本：
+{{new_text}}
+
+以JSON格式返回差异：
+{"diffs": [{"type": "added/removed/modified", "section": "章节名称", "summary": "差异说明"}], "overall_summary": "总体变化概述"}
+只返回JSON。
